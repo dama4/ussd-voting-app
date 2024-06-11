@@ -69,8 +69,8 @@ app.post('/ussd', (req, res) => {
             } else {
                 // Voting option selected
                 response = userLanguages[phoneNumber] === 'en' ? 
-                    `CON Select a candidate:\n1. UWASE Lydie\n2. NYIRAMBONIGABA Epiphanie\n3. UWINEZA Esther\n4. NIYOMUKIZA Damars\n5. Vyn AGATESI Aline` : 
-                    `CON Chagua mgombea:\n1. UWASE Lydie\n2. NYIRAMBONIGABA Epiphanie\n3. UWINEZA Esther\n4. NIYOMUKIZA Damars\n5. Vyn AGATESI Aline`;
+                    `CON Select a candidate:\n1. UWASE Lydie\n2. NYIRAMBONIGABA Epiphanie\n3. UWINEZA Esther\n4. NIYOMUKIZA Damars\n5. AGATESI Aline` : 
+                    `CON Chagua mgombea:\n1. UWASE Lydie\n2. NYIRAMBONIGABA Epiphanie\n3. UWINEZA Esther\n4. NIYOMUKIZA Damars\n5. AGATESI Aline`;
             }
         } else if (userInput[2] === '2') {
             // View votes option selected
