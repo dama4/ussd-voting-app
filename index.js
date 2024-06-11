@@ -69,8 +69,8 @@ app.post('/ussd', (req, res) => {
             } else {
                 // Voting option selected
                 response = userLanguages[phoneNumber] === 'en' ? 
-                    `CON Select a candidate:\n1. Jeremy MURENZI\n2. Lynn GIHOZO\n3. Claude KABAKA\n4. Jasmin IRABIZI\n5. Vyn NTWARI` : 
-                    `CON Chagua mgombea:\n1. Jeremy MURENZI\n2. Lynn GIHOZO\n3. Claude KABAKA\n4. Jasmin IRABIZI\n5. Vyn NTWARI`;
+                    `CON Select a candidate:\n1. UWASE Lydie\n2. NYIRAMBONIGABA Epiphanie\n3. UWINEZA Esther\n4. NIYOMUKIZA Damars\n5. Vyn AGATESI Aline` : 
+                    `CON Chagua mgombea:\n1. UWASE Lydie\n2. NYIRAMBONIGABA Epiphanie\n3. UWINEZA Esther\n4. NIYOMUKIZA Damars\n5. Vyn AGATESI Aline`;
             }
         } else if (userInput[2] === '2') {
             // View votes option selected
@@ -114,7 +114,7 @@ app.post('/ussd', (req, res) => {
     } else if (userInput.length === 4) {
         // Fourth level menu: Voting confirmation
         let candidateIndex = parseInt(userInput[3]) - 1;
-        let candidateNames = ["Jeremy MURENZI  ", "Lynn GIHOZO ", "Claude KABAKA ", "Jasmin IRABIZI ", "Vyn NTWARI "];
+        let candidateNames = ["UWASE Lydie  ", "NYIRAMBONIGABA Epiphanie ", "UWINEZA Esther ", "NIYOMUKIZA Damars ", "AGATESI Aline "];
         if (candidateIndex >= 0 && candidateIndex < candidateNames.length) {
             voters.add(phoneNumber); // Mark this phone number as having voted
             response = userLanguages[phoneNumber] === 'en' ? 
